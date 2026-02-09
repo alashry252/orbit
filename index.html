@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit | جاري التحميل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* تعديل الألوان لتطابق ملف style.css الخاص بك */
+            --primary-color: #4f46e5; /* النيلي */
+            --accent-color: #ec4899;  /* الوردي */
+            --bg-dark: #050505;
+            --text-light: #f8f9fc;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Cairo', sans-serif; /* تغيير الخط ليناسب موقعك */
+        }
+
+        .loader-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #111122 0%, #000000 100%);
+            transition: all 0.8s ease-in-out;
+        }
+
+        /* --- المفاعل النووي المطور بألوانك --- */
+        .reactor-loader {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .core-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            /* توهج يدمج بين النيلي والوردي */
+            box-shadow: 0 0 30px var(--primary-color), 
+                        0 0 60px var(--accent-color), 
+                        0 0 100px rgba(255, 255, 255, 0.2);
+            animation: pulse 1.5s infinite alternate;
+            z-index: 10;
+        }
+
+        .ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            /* الحلقات تأخذ ألوان هويتك */
+            border-top: 4px solid var(--primary-color);
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+        }
+
+        .ring-1 { animation: spin1 2s linear infinite; }
+        .ring-2 { animation: spin2 3s linear infinite; width: 180px; height: 180px; top: 10px; left: 10px; border-width: 3px; }
+        .ring-3 { animation: spin3 1.5s linear infinite; width: 240px; height: 240px; top: -20px; left: -20px; opacity: 0.6; }
+        .ring-4 { 
+            animation: spin4 5s linear infinite; 
+            border: 2px dashed rgba(236, 72, 153, 0.4); 
+            width: 280px; height: 280px; top: -40px; left: -40px;
+        }
+
+        /* --- الأنميشن --- */
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+            100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+        }
+
+        @keyframes spin1 {
+            0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        @keyframes spin2 {
+            0% { transform: rotateX(60deg) rotateY(0deg); }
+            100% { transform: rotateX(60deg) rotateY(360deg); }
+        }
+        @keyframes spin3 {
+            0% { transform: rotateX(-60deg) rotateY(0deg); }
+            100% { transform: rotateX(-60deg) rotateY(-360deg); }
+        }
+        @keyframes spin4 {
+            0% { transform: rotateZ(0deg) scale(1); }
+            100% { transform: rotateZ(360deg) scale(1); }
+        }
+
+        /* --- النص المصمم ليتناسب مع "Orbit" --- */
+        .loading-text {
+            margin-top: 100px;
+            text-align: center;
+            color: var(--text-light);
+            z-index: 5;
+        }
+
+        .letter {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 15px;
+            display: inline-block;
+            animation: bounce 2s infinite;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* توهج خفيف للنص */
+            filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.5));
+        }
+
+        .letter:nth-child(2) { animation-delay: 0.1s; }
+        .letter:nth-child(3) { animation-delay: 0.2s; }
+        .letter:nth-child(4) { animation-delay: 0.3s; }
+        .letter:nth-child(5) { animation-delay: 0.4s; }
+
+        .sub-text {
+            color: #64748b;
+            font-size: 1rem;
+            margin-top: 15px;
+            letter-spacing: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); filter: brightness(1); }
+            50% { transform: translateY(-15px); filter: brightness(1.5); }
+        }
+
+        /* تأثير الانتقال النهائي (انفجار ضوئي) */
+        .zoom-out-effect {
+            transform: scale(20);
+            opacity: 0;
+            filter: blur(20px);
+        }
+
+        .bg-white-out {
+            background: #f8f9fc !important; /* نفس خلفية موقعك الأصلية */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container" id="mainLoader">
+        <div class="reactor-loader" id="reactor">
+            <div class="core-glow"></div>
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+            <div class="ring ring-4"></div>
+        </div>
+        
+        <div class="loading-text">
+            <span class="letter">O</span>
+            <span class="letter">R</span>
+            <span class="letter">B</span>
+            <span class="letter">I</span>
+            <span class="letter">T</span>
+            <div class="sub-text">Preparing Digital Orbit...</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // مدة التحميل (4 ثواني)
+            const duration = 4000;
+
+            setTimeout(() => {
+                const reactor = document.getElementById('reactor');
+                const container = document.getElementById('mainLoader');
+
+                // بدء أنميشن الخروج الاحترافي
+                reactor.classList.add('zoom-out-effect');
+                container.classList.add('bg-white-out');
+
+                setTimeout(() => {
+                    // الانتقال لصفحة الموقع الرئيسية
+                    // تأكد أن اسم الملف هو index.html
+                    window.location.href = 'main.html';
+                }, 800); 
+
+            }, duration);
+        });
+    </script>
+</body>
+</html>
