@@ -857,7 +857,7 @@ body {
     /* تقسيم الشبكة: 3 أعمدة (الفيديو يأخذ مساحة أكبر) */
     grid-template-columns: 1.5fr 1fr 1fr;
     /* صفين بارتفاعات متناسقة */
-    grid-template-rows: 350px 0px;
+    grid-template-rows: 350px 400px;
     gap: 20px;
     margin-top: 40px;
 }
