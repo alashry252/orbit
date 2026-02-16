@@ -40,7 +40,7 @@
     "salama-sadka": {
       "name": "معامل سلامة صدقة",
       "facebook":"https://www.facebook.com/salama.sadka.lab",
-
+      "insta":"https://www.instagram.com/salama_sadakalabs?igsh=YmtzcnVkenowc2k5",
       "category": "هوية بصرية",
       "client_info": "عشان العناية بصحتك أولويتنابنقدم تحاليل طبية دقيقة في وقت قياسي من خلال أفضل الخدمات الطبية و أحدث الأجهزة كل ده لنتائج مضمونة على أعلى مستوى من الجودة .",
       "date": "فبراير 2026",
@@ -931,6 +931,117 @@
         },
         {
           "url": "image/dr-balbaa/6.jpg",
+          "tag": "سوشيال ميديا"
+        }
+        
+      ]
+    },"wakanda":{
+      "name": "Wakanda",
+      "facebook":"https://www.facebook.com/people/Wakanda/61573928788512/",
+      "category": "تصميم واجهات UI/UX",
+      "client_info":"Wakanda Café Where Legends Brew ⚡️",
+      "date": "27/11/2024",
+      "cover_image": "image/cover/Wakanda.jpg",
+      "main_video": "",
+      "filters": [
+        "الكل",
+        "سوشيال ميديا"
+      ],
+      "gallery": [
+        {
+          "url": "image/wakanda/1.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/wakanda/2.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/wakanda/3.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/wakanda/4.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/wakanda/5.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/wakanda/6.jpg",
+          "tag": "سوشيال ميديا"
+        }
+        
+      ]
+    },"dr-saad":{
+      "name": "د. سعد محمد سعد",
+      "facebook":"https://www.facebook.com/Dr.saad.abosamra",
+      "category": "تصميم واجهات UI/UX",
+      "client_info":"استشاري أمراض الباطنه والكبد والجهاز الهضمى وعلاج الصغط والسكر",
+      "date": "8/1/2025",
+      "cover_image": "image/cover/dr-saad.jpg",
+      "main_video": "",
+      "filters": [
+        "الكل",
+        "سوشيال ميديا"
+      ],
+      "gallery": [
+        {
+          "url": "image/dr-saad/1.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/dr-saad/2.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/dr-saad/3.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/dr-saad/4.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/dr-saad/5.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/dr-saad/6.jpg",
+          "tag": "سوشيال ميديا"
+        }
+        
+      ]
+    },"Rowia":{
+      "name": "اكاديمية رؤية للتدريب",
+      "facebook":"https://www.facebook.com/Dr.saad.abosamra",
+      "category": "تصميم واجهات UI/UX",
+      "client_info":"في اكاديمية رؤية للتطوير هنساعدك تحقق اللي نفسك فيهالرؤية والحلم هيصبح حقيقة معانا !!فكر واحلم وهنحقق لك حلمك بكورسات اكاديمية رؤية",
+      "date": "10/12/2024",
+      "cover_image": "image/cover/Rowia.jpg",
+      "main_video": "",
+      "filters": [
+        "الكل",
+        "سوشيال ميديا"
+      ],
+      "gallery": [
+        {
+          "url": "image/Rowia/1.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/Rowia/2.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/Rowia/3.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/Rowia/4.jpg",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/Rowia/5.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/Rowia/6.jpg",
           "tag": "سوشيال ميديا"
         }
         

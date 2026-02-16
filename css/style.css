@@ -10,7 +10,16 @@
     /* أزرق نيلي عصري */
     --accent-color: #ec4899;
     /* وردي للإبراز */
+    --primary-color: #4361ee;
+    --primary-dark: #3f37c9;
+    --accent-color: #4cc9f0;
+    --bg-light: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
     --white: #ffffff;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --hover-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -424,7 +433,12 @@ body {
     background-color: #fff;
     overflow: hidden;
 }
-
+.tag{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary-color)
+;
+}
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1772,4 +1786,298 @@ body {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+/* تنسيق الحاوية والجريد */
+.pricing-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* جريد متجاوب تلقائي */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* --- الهيدر (Header) --- */
+.pricing-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--white);
+    margin-bottom: 20px;
+}
+
+.pricing-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin: 15px 0;
+    font-weight: 800;
+}
+
+.pricing-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.badge-pill {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* زر التبديل (Toggle) */
+.pricing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.toggle-switch {
+    width: 50px;
+    height: 26px;
+    background: var(--primary-color);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+/* حالة التفعيل للتبديل (يمكن إضافتها عبر JS لاحقاً) */
+.toggle-switch.active::after {
+    left: calc(100% - 23px);
+}
+
+.highlight {
+    color: #10b981; /* لون أخضر للخصم */
+    font-size: 0.9rem;
+}
+
+
+/* --- بطاقات الأسعار (Pricing Cards) --- */
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid #e2e8f0;
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--primary-color);
+}
+
+/* البطاقة المميزة (الأكثر طلباً) */
+.pricing-card.popular {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(to bottom, #ffffff, #f0f4ff);
+    transform: scale(1.05); /* تكبير بسيط للتميز */
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(67, 97, 238, 0.1);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* تفاصيل البطاقة */
+.card-header {
+    text-align: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.card-header .desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--text-main);
+}
+
+.price .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 2px;
+}
+
+.price .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+/* الميزات (Features) */
+.card-features {
+    flex-grow: 1; /* لجعل الأزرار في مستوى واحد */
+    margin-bottom: 30px;
+}
+
+.card-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-features li {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-features li i {
+    color: var(--primary-color); /* لون علامة الصح */
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* الأزرار */
+.btn-outline, .btn-primary-full {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition);
+    margin-top: auto;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary-full {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+}
+
+.btn-primary-full:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* --- الأسئلة الشائعة (FAQ) --- */
+.faq-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: var(--text-main);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: var(--card-shadow);
+}
+
+.faq-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.faq-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- استجابة الموبايل (Responsive) --- */
+@media (max-width: 768px) {
+    .pricing-card.popular {
+        transform: scale(1); /* إلغاء التكبير في الموبايل لعدم تداخل العناصر */
+        z-index: 1;
+    }
+    
+    .pricing-header h1 {
+        font-size: 2rem;
+    }
+    
+    .grid-container {
+        padding: 10px;
+        gap: 20px;
+    }
 }
