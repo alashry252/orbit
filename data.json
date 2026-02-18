@@ -40,7 +40,6 @@
     "salama-sadka": {
       "name": "معامل سلامة صدقة",
       "facebook":"https://www.facebook.com/salama.sadka.lab",
-      "insta":"https://www.instagram.com/salama_sadakalabs?igsh=YmtzcnVkenowc2k5",
       "category": "هوية بصرية",
       "client_info": "عشان العناية بصحتك أولويتنابنقدم تحاليل طبية دقيقة في وقت قياسي من خلال أفضل الخدمات الطبية و أحدث الأجهزة كل ده لنتائج مضمونة على أعلى مستوى من الجودة .",
       "date": "فبراير 2026",
@@ -90,6 +89,49 @@
           "url": "image/salama-sadka/10.jpg",
           "tag": "سوشيال ميديا"
         }
+      ]
+    },
+    "salama-insta": {
+      "name": "معامل سلامة صدقة انستجرام",
+      "insta":"https://www.instagram.com/salama_sadakalabs",
+      "category": "هوية بصرية",
+      "client_info": "عشان العناية بصحتك أولويتنابنقدم تحاليل طبية دقيقة في وقت قياسي من خلال أفضل الخدمات الطبية و أحدث الأجهزة كل ده لنتائج مضمونة على أعلى مستوى من الجودة .",
+      "date": "فبراير 2026",
+      "cover_image": "image/cover/salama-inst.jpeg",
+      "filters": [
+        "الكل",
+        "سوشيال ميديا"
+      ],
+      "gallery": [
+        {
+          "url": "image/salama-insta/1.jpg",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/2.png",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/3.png",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/4.png",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/5.mp4",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/6.mp4",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/salama-insta/7.mp4",
+          "tag": "سوشيال ميديا"
+        }
+       
       ]
     },
     "DermaArtCenter": {
@@ -1044,6 +1086,38 @@
           "url": "image/Rowia/6.jpg",
           "tag": "سوشيال ميديا"
         }
+        
+      ]
+    },"mahmoud-adel":{
+      "name": "النائب محمود عادل شعلان",
+      "category": "تصميم واجهات UI/UX",
+      "client_info":" بنرات النائب محمود عادل شعلان ",
+      "cover_image": "image/cover/mahmoud-adel.jpg",
+      "main_video": "",
+      "filters": [
+        "الكل",
+        "سوشيال ميديا"
+      ],
+      "gallery": [
+        {
+          "url": "image/mahmoud-adel/1.jfif",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/mahmoud-adel/2.jfif",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/mahmoud-adel/3.jfif",
+          "tag": "سوشيال ميديا"
+        },
+        {
+          "url": "image/mahmoud-adel/4.jfif",
+          "tag": "سوشيال ميديا"
+        }, {
+          "url": "image/mahmoud-adel/5.jfif",
+          "tag": "سوشيال ميديا"
+        }
+       
         
       ]
     }

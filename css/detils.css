@@ -394,7 +394,29 @@ body {
         font-size: 2.5rem;
     }
 }
+/* start video */
+/* تنسيق الفيديوهات في المعرض */
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضمان ملء المربع تماماً مثل الصور */
+    display: block;
+}
 
+/* تنسيق الفيديو داخل الـ Lightbox */
+.lightbox-video {
+    max-width: 90%;
+    max-height: 80vh;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    outline: none;
+}
+
+/* أيقونة الفيديو في الأوفرلاي */
+.video-item .item-overlay i {
+    font-size: 3.5rem;
+    color: #fff;
+    opacity: 0.9;
+}
 /* start footer */
 /* --- الفوتر (Footer) --- */
 .main-footer {
