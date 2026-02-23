@@ -2035,7 +2035,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 0 auto;
 }
 
@@ -2061,8 +2061,10 @@ body {
 
 .faq-item p {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.7rem;
     line-height: 1.6;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* --- استجابة الموبايل (Responsive) --- */
